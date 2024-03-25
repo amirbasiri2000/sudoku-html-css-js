@@ -1,149 +1,174 @@
 /* Design By Keyur Diwan */
 
-html, body {
-    background-color: rgb(196, 247, 247);
-    min-width: 600px;
-    font-family: monospace;
-    font-size: 1.5 em;
-  }
-
-  table {
-    border: 2px solid #000000;
-  }
-
-  td {
-    border: 1px solid #000000;
-    text-align: center;
-    vertical-align: middle;  
-  }
-
-  input {
-    color: rgba(26, 252, 5, 0.815);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 0;
-    border: 0;
-    text-align: center;
-    width: 48px;
-    height: 48px;
-    font-size: 24px !important;
-    background-color: whitesmoke;
-    outline: none;
-  }
-
-  right-ans{
-      color: chartreuse;
-  }
-
-  input:disabled {
-    color:black;
-    /* font-weight: bold; */
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+html,
+body {
+  background-color: rgb(196, 247, 247);
+  min-width: 600px;
+  font-family: monospace;
+  font-size: 1.5 em;
 }
 
-  .row-2, .row-5 {border-bottom: 2px solid #000000;}
-  .row-3, .row-6 {border-top: 2px solid #000000;}
-  .col-2, .col-5 {border-right: 2px solid #000000;}
-  .col-3, .col-6 {border-left: 2px solid #000000;}
-  .col-0 {border-left: 2px solid #000000;}
-  .row-0 {border-top: 2px solid #000000;}
-  .col-8 {border-right: 2px solid #000000;}
-  .row-8 {border-bottom: 2px solid #000000;}
+table {
+  border: 4px solid rgb(75, 138, 138);
+}
 
-  .background-gray{
+td {
+  border: 1px solid #000000;
+  text-align: center;
+  vertical-align: middle;
+}
+
+input {
+  color: rgba(26, 252, 5, 0.815);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  font-size: 24px !important;
+  background-color: whitesmoke;
+  outline: none;
+}
+
+right-ans {
+  color: chartreuse;
+}
+
+input:disabled {
+  color: black;
+  /* font-weight: bold; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.row-2,
+.row-5 {
+  border-bottom: 2px solid #000000;
+}
+.row-3,
+.row-6 {
+  border-top: 2px solid #000000;
+}
+.col-2,
+.col-5 {
+  border-right: 2px solid #000000;
+}
+.col-3,
+.col-6 {
+  border-left: 2px solid #000000;
+}
+.col-0 {
+  border-left: 2px solid #000000;
+}
+.row-0 {
+  border-top: 2px solid #000000;
+}
+.col-8 {
+  border-right: 2px solid #000000;
+}
+.row-8 {
+  border-bottom: 2px solid #000000;
+}
+
+.background-gray {
   /* background-color: hotpink; */
-    background-color: rgb(222, 236, 240) !important;
-  }
-  
-  .wrong-answer{
-    color: red;
-  }
-  .action-container{
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-rows: auto auto auto;
-  }
-  .actions{
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    max-width: 600px;
-  }
-  
-  .container{
-    display: grid;
-    grid-row: auto auto auto;
+  background-color: rgb(222, 236, 240) !important;
+}
 
-  }
+.wrong-answer {
+  color: red !important;
+}
+.action-container {
+  margin-left: auto;
+  margin-right: auto;
+  /* display: grid;
+  grid-template-rows: auto auto auto; */
+}
+.actions {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  /* max-width: 600px; */
+  margin: 15px 0;
+}
 
-  .board-container{
-    margin-left: auto;
-    margin-right: auto;
-  }
+.actions button,
+select {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgb(3, 96, 96);
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 2px 4px 10px #053c3c;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+}
 
-  .footer{
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 28px;
-   
-  }
+.container {
+  display: grid;
+  grid-row: auto auto auto;
+}
 
-  .score, .submit{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5em;
-  }
+.board-container {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  button:hover{
-    cursor: pointer;
-    background-color: lightcyan;
-    border: 1px solid black;
-  }
-  button:disabled{
-    cursor: default;
-    background-color: lightcyan;
-    color: black;
-    font-size: 16px;
-    padding: 7px;
-    margin: 10px;
-    border: 1px solid black;
-    /* border: black; */
-  }
-  select, button{
-    font-size: 16px;
-    padding: 7px;
-    margin: 10px;
-    
-    background-color:  lightcyan ;
-    /* border: red; */
-    text-align: center;
-  }
+.footer {
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 28px;
+}
 
-  .pending{
-    cursor: wait;
-    pointer-events: none;
-  }
+.score,
+.submit {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
 
-  .levels, .newGame, .clearBoard{
-      /* background-color: red; */
-    margin: 0.5em;
-  }
+button:hover {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  font-size: 16px;
 
-  #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: wait;
-  }
+  /* border: black; */
+}
 
-  #timer{
-      font-size: 50px;
-  }
+.pending {
+  cursor: wait;
+  pointer-events: none;
+}
+
+.levels,
+.newGame,
+.clearBoard {
+  /* background-color: red; */
+  margin: 0.5em;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: wait;
+}
+
+#timer {
+  font-size: 43px;
+  color: #595959;
+  margin: 5px 0 20px;
+}
