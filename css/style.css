@@ -1,11 +1,17 @@
 /* Design By Keyur Diwan */
+@font-face {
+  font-family: "Vazir"; /* Name of the font */
+  src: url("css/fonts/Vazirmatn-Light.ttf") format("truetype"); /* Path to the font file */
+}
 
 html,
 body {
-  background-color: rgb(196, 247, 247);
+  /* background-color: rgb(196, 247, 247); */
   min-width: 600px;
   font-family: monospace;
   font-size: 1.5 em;
+  background-image: url('../images/bg.jpg');
+  background-repeat: no-repeat;
 }
 
 table {
@@ -105,7 +111,7 @@ select {
   font-weight: bold;
   box-shadow: 2px 4px 10px #053c3c;
   font-size: 15px;
-  letter-spacing: 1.2px;
+  font-family: "Vazir";
 }
 
 .container {
